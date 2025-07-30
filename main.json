@@ -1,0 +1,21 @@
+{
+	"id": "umbrpoke",
+	"name": "Umbra Pokermon",
+	"author": ["UmbralFolly"],
+	"description": "An add-on mod for Pokermon",
+	"prefix": "umbr",
+	"main_file": "main.lua",
+	"priority": 23,
+	"badge_colour": "283234",
+	"badge_text_colour": "FFFFFF",
+  "display_name": "UmbraPokermon",
+	"version": "1.0.0",
+	"dependencies": [
+			"Steamodded (>=1.0.0~ALPHA-1303a)",
+      "Lovely (>=0.6)",
+      "Pokermon (>=2.7.0)"
+	],
+  "conflicts": [],
+	"provides": [],
+	"dump_loc": false 
+}
