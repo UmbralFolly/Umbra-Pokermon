@@ -1,0 +1,22 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+# Magikarp functionality
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = "if next(find_joker('Splash')) then"
+position = "at"
+payload = "if next(find_joker('Splash')) or next(SMODS.find_card('j_umbr_tatsugiri_curly')) or next(SMODS.find_card('j_umbr_tatsugiri_droopy')) or next(SMODS.find_card('j_umbr_tatsugiri_stretchy')) or next(SMODS.find_card('j_poke_magikarp')) or next(SMODS.find_card('j_poke_feebas')) then"
+match_indent = true
+
+# Magikarp functionality better calc
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = "local splashed = SMODS.always_scores(G.play.cards[i]) or next(find_joker('Splash')) or next(SMODS.find_card('j_poke_magikarp')) or next(SMODS.find_card('j_poke_feebas'))"
+position = "at"
+payload = "local splashed = SMODS.always_scores(G.play.cards[i]) or next(find_joker('Splash')) or next(SMODS.find_card('j_umbr_tatsugiri_curly')) or next(SMODS.find_card('j_umbr_tatsugiri_droopy')) or next(SMODS.find_card('j_umbr_tatsugiri_stretchy')) or next(SMODS.find_card('j_poke_magikarp')) or next(SMODS.find_card('j_poke_feebas'))"
+match_indent = true

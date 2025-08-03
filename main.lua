@@ -12,10 +12,29 @@ SMODS.Atlas({
     py = 95
 }):register()
 
+SMODS.Atlas({
+    key = "umbr_placeholder_item",
+    path = "umbr_placeholder_item.png",
+    px = 71,
+    py = 95
+}):register()
+
+SMODS.Atlas({
+    key = "umbr_tera_shard",
+    path = "umbr_tera_shard.png",
+    px = 71,
+    py = 95
+}):register()
+
 --Required by the pokemon family function (right click on a pokemon joker)
 table.insert(pokermon.family, {"tropius"})
 table.insert(pokermon.family, {"timburr", "gurdurr", "conkeldurr"})
 table.insert(pokermon.family, {"swirlix", "slurpuff", "swirlix_puff"})
+table.insert(pokermon.family, {"lechonk", "oinkologne"})
+table.insert(pokermon.family, {"minior_shell", "minior"})
+table.insert(pokermon.family, {"tatsugiri"})
+table.insert(pokermon.family, {"dondozo"})
+table.insert(pokermon.family, {"axew", "fraxure", "haxorus"})
 
 -- Get mod path and load other files
 mod_dir = ''..SMODS.current_mod.path
@@ -98,6 +117,7 @@ if (SMODS.Mods["Pokermon"] or {}).can_load and SMODS.Mods["Pokermon"] and not po
     end
   end
 
+--Load consumables
 local pconsumables = NFS.getDirectoryItems(mod_dir.."consumables")
 
 if (SMODS.Mods["Pokermon"] or {}).can_load and SMODS.Mods["Pokermon"] then
@@ -118,8 +138,6 @@ if (SMODS.Mods["Pokermon"] or {}).can_load and SMODS.Mods["Pokermon"] then
     end
   end 
 end
-
-
 
 -- Get mod path and load other files
 mod_dir = ''..SMODS.current_mod.path
